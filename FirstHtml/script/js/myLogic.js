@@ -6,11 +6,11 @@
 function ViewRegione() {
     //alert("Page is loaded");
     var divReg = document.getElementById("divRegione");
-    //kdivReg.hidden = "false";
+    divReg.style.visibility = 'visible';
 
     var divPro = document.getElementById("divProvincia")
-    divPro.hidden = "true";
+    divPro.style.visibility = "visible";
 
     var divCom = document.getElementById("divComune");
-    divCom.hidden = "true";
+    divCom.style.visibility = "visible";
 }
