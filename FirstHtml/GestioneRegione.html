@@ -6,33 +6,50 @@
 		<link href=".\script\css\bootstrap.min.css" type="text/css" rel="stylesheet">
 		<script src=".\script\js\bootstrap.bundle.min.js"></script>
 		<script src=".\script\js\myLogic.js"></script>
+		<style>
+			.my-column {
+    			text-align: center;
+			}
+
+			button {
+				margin: 1rem;
+			}
+		</style>
 	</head>
-	<body onload="ViewRegione()">
+	<body onload="showRegione()">
 		<div class="container-fluid p-5 bg-primary text-white text-center">
-			<h1>My First Bootstrap Page</h1>
-			<p>Resize this responsive page to see the effect!</p> 
+			<h1>Citizens</h1>
+			<p>Discover the citizens of a town!</p> 
 		</div>
   
 		<div class="container mt-5">
 			<div class="row">
-				<div id="divRegione" class="col-sm-4">
+				<div id="divRegion" class="col-sm-4 my-column">
 					<h3>Regione</h3>
-					<select name="Regione" id="regione">
-						<option value="Default"></option>
-						<option value="Lazio">Lazio</option>
-						<option value="Sicilia">Sicilia</option>
-						<option value="Toscana">Toscana</option>
+					<select name="Region" id="region" onchange="getProvince()">
+						<option value="0" selected>Select a Region</option>
+						<option value="1">Umbria</option>
+						<option value="2">Lazio</option>
+						<option value="3">Toscana</option>
+						<option value="4">Marche</option>
 					</select>
 				</div>
-				<div id="divProvincia" class="col-sm-4">
+				<div id="divProvince" class="col-sm-4 my-column" onchange="getTown()">
 					<h3>Provincia</h3>
-					<select name="Provincia" id="provincia">
+					<select name="Province" id="province">
+						<option value="0" selected>Select a Province</option>
 					</select>
 				</div>
-				<div id="divComune" class="col-sm-4">
+				<div id="divTown" class="col-sm-4 my-column">
 					<h3>Comune</h3>        
-					<select name="Comune" id="comune">
+					<select name="Town" id="town" onchange="getButton()">
+						<option value="0" selected>Select a Town</option>
 					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div id="divBut" class="col my-column">
+					<button>Show table</button>
 				</div>
 			</div>
 		</div>
