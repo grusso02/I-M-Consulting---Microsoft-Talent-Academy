@@ -4,8 +4,11 @@
         <script src=".\jquery-3.6.0.min.js"></script>
         <script src=".\myJS.js"></script>
     </head>
-    <body onload="takeDate()">
-        <p id="ItalianDate"></p>
-        <p id="EnglishDate"></p>
+    <body onload="loadData()">
+        <h3>Date in English Format</h3>
+        <input id="engDate" type="text" placeholder="mm-dd-yyyy"></input>
+        <button onclick="convertDateToItFormat(document.getElementById('engDate').value)">Convert</button>
+        <h3>Date in Italian Format</h3>
+        <p id="itDate"></p>
     </body>
 </html>

@@ -1,17 +1,21 @@
-function takeDate() {
-    const input = prompt("Insert English Date");
-    document.getElementById("ItalianDate").innerHTML = input;
+function loadData() {
+    let now = new Date().toLocaleDateString();
+    document.getElementById("engDate").value = now;
+}
 
+function convertDateToItFormat(str) {
     var engDate;
-    if (input.match(/-/g).length == 2) {
-        engDate = input.split("-");
-    } else if (input.match().length == 2) {
-        engDate = input.split("/");
+    if (str.indexOf("-") > -1) {
+        engDate = str.split("-");
+    } else if (str.indexOf("/") > -1) {
+        engDate = str.split("/");
     } else {
-        engDate = "Errore!";
+        alert("Wrong Format!");
     }
-
+ 
     [engDate[0], engDate[1]] = [engDate[1], engDate[0]]; // Just a swap
-    let engDate2 = engDate.join("-");
-    document.getElementById("EnglishDate").innerHTML = engDate2;
+    engDate = engDate.join("-");
+    document.getElementById("itDate").innerHTML = engDate;
+
+    let a = new Date();
 }
