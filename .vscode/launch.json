@@ -7,8 +7,8 @@
         {
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Open GestioneRegione.html",
-            "file": "c:\\Microsoft-Talent-Academy\\FirstHtml\\GestioneRegione.html"
+            "name": "Debug",
+            "file": "c:\\Microsoft-Talent-Academy\\AJAX-JSON-Request\\index.html"
         }
     ]
 }
