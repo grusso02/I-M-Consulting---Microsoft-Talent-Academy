@@ -28,8 +28,9 @@ function getProvince() {
     removeAllOptions(document.getElementById("province"));
     removeAllOptions(document.getElementById("town"));
 
+    let selRegion = document.getElementById("selRegion");
     for (let i = 0; i < myArr.length; ++i) {
-        if (document.getElementById("region").value == myArr[i].idRegione) {
+        if (selRegion.value == myArr[i].idRegione) {
             if (document.getElementById("divProvince").style.visibility == "hidden")
                 document.getElementById("divProvince").style.visibility = "visible";
             let newoption = document.createElement("option");
