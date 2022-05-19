@@ -25,8 +25,8 @@ function removeAllOptions(selectBox) {
 }
 
 function getProvince() {
-    removeAllOptions(document.getElementById("province"));
-    removeAllOptions(document.getElementById("town"));
+    removeAllOptions(document.getElementById("selProvince"));
+    removeAllOptions(document.getElementById("selTown"));
 
     let selRegion = document.getElementById("selRegion");
     for (let i = 0; i < myArr.length; ++i) {
@@ -35,22 +35,23 @@ function getProvince() {
                 document.getElementById("divProvince").style.visibility = "visible";
             let newoption = document.createElement("option");
             newoption.textContent = myArr[i].nomeProvincia;
-            document.getElementById("province").add(newoption);
+            document.getElementById("selProvince").add(newoption);
         }
     }
 }
 
 function getTown() {
-    removeAllOptions(document.getElementById("town"));
+    removeAllOptions(document.getElementById("selTown"));
 
+    let selProvince = document.getElementById("selProvince");
     for (let i = 0; i < myArr.length; ++i) {
-        if (document.getElementById("province").value == myArr[i].nomeProvincia) {
+        if (selProvince.value == myArr[i].nomeProvincia) {
             if (document.getElementById("divTown").style.visibility == "hidden")
                 document.getElementById("divTown").style.visibility = "visible";
             for (let j = 0; j < myArr[i].comuni.length; ++j) {
                 let newoption = document.createElement("option");
                 newoption.textContent = myArr[i].comuni[j];
-                document.getElementById("town").add(newoption);
+                document.getElementById("selTown").add(newoption);
             }
         }
     }
