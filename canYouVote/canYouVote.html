@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="">
+            function myFunction() {
+                let age = 0;
+                age = parseInt(document.getElementById("age").value);
+                console.log(age);
+
+                if(isNaN(age)) {
+                    alert(document.getElementById("age").value + " is not a number");
+                    document.getElementById("demo").innerHTML = "NaN - Inserire un intero per verificare se si può votare.";
+                } else {
+                    if(typeof age == 'number') {
+                        alert(age + " is a number");
+                        let voteable = (age < 18) ? "Too young":"Old enough";
+                        let pDemo = document.getElementById("demo");
+                        pDemo.innerHTML = voteable + " to vote.";
+                    } else {
+                        alert(age + " is not a number");
+                        document.getElementById("demo").innerHTML = "Inserire un intero per verificare se si può votare.";
+                    }
+                }
+            }
+    </script>
+    </head>
+<body>
+<h2>JavaScript Comparison</h2>
+<p>Input your age and click the button:</p>
+<form>
+  <input id="age" type="text" value="18" required/>
+</form>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+</body>
+</html>
