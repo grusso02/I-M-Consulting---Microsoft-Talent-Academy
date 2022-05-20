@@ -61,3 +61,17 @@ function getButton() {
     if (document.getElementById("divBut").style.visibility == "hidden")
         document.getElementById("divBut").style.visibility = "visible";
 }
+
+function viewDataAPI() {
+    $.ajax({
+        type: "GET",
+        url: "https://jsonplaceholder.typicode.com/users",
+        success: function(msg) {
+            console.log(msg);
+            $("#div1").html(JSON.stringify(msg));
+        },
+        error: function(xhr, status) {
+            hj
+        }
+    });
+}
