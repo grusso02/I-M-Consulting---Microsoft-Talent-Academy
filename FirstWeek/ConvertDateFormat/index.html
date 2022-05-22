@@ -1,0 +1,30 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+		<script src="..\script\js\jquery-3.6.0.min.js"></script>
+		<link href="..\script\styles\bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link href="..\script\styles\styles.css" type="text/css" rel="stylesheet">
+		<script src="..\script\js\bootstrap.bundle.min.js"></script>
+        <script src=".\myJS.js"></script>
+    </head>
+    <body onload="loadData()">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="../ManagmentRegion/GestioneRegione.html">Regioni</a>
+					<a class="nav-item nav-link" href="../canYouVote/canYouVote.html">canYouVote?</a>
+					<a class="nav-item nav-link" href="#">ConvertDateFormat</a>
+				</div>
+			</div>
+		</nav>
+        <h3>Date in English Format</h3>
+        <input id="engDate" type="text" placeholder="mm-dd-yyyy"></input>
+        <button onclick="convertDateToItFormat(document.getElementById('engDate').value)">Convert</button>
+        <h3>Date in Italian Format</h3>
+        <p id="itDate"></p>
+    </body>
+</html>

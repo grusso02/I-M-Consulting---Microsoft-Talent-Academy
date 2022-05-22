@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="..\script\js\jquery-3.6.0.min.js"></script>
+		<link href="..\script\styles\bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="..\script\styles\styles.css" type="text/css" rel="stylesheet">
+		<script src="..\script\js\bootstrap.bundle.min.js"></script>
         <script type="">
             function myFunction() {
                 let age = 0;
@@ -24,13 +28,26 @@
             }
     </script>
     </head>
-<body>
-<h2>JavaScript Comparison</h2>
-<p>Input your age and click the button:</p>
-<form>
-  <input id="age" type="text" value="18" required/>
-</form>
-<button onclick="myFunction()">Try it</button>
-<p id="demo"></p>
-</body>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="../ManagmentRegion/GestioneRegione.html">Regioni</a>
+					<a class="nav-item nav-link" href="#">canYouVote?</a>
+					<a class="nav-item nav-link" href="../ConvertDateFormat/index.html">ConvertDateFormat</a>
+				</div>
+			</div>
+		</nav>
+        <h2>JavaScript Comparison</h2>
+        <p>Input your age and click the button:</p>
+        <form>
+            <input id="age" type="text" value="18" required/>
+        </form>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+    </body>
 </html>

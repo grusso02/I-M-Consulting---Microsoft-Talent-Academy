@@ -4,6 +4,7 @@
 		<title>My first page</title>
 		<script src=".\script\js\jquery-3.6.0.min.js"></script>
 		<link href=".\script\css\bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link href="..\script\styles\styles.css" type="text/css" rel="stylesheet">
 		<script src=".\script\js\bootstrap.bundle.min.js"></script>
 		<script src=".\script\js\myLogic.js"></script>
 		<style>
@@ -17,6 +18,19 @@
 		</style>
 	</head>
 	<body onload="showRegione()">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="#">Regioni</a>
+					<a class="nav-item nav-link" href="../canYouVote/canYouVote.html">canYouVote?</a>
+					<a class="nav-item nav-link" href="../ConvertDateFormat/index.html">ConvertDateFormat</a>
+				</div>
+			</div>
+		</nav>
 		<div class="container-fluid p-5 bg-primary text-white text-center">
 			<h1>Citizens</h1>
 			<p>Discover the citizens of a town!</p> 
