@@ -1,0 +1,16 @@
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.exe
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.deps.json
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.runtimeconfig.json
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.runtimeconfig.dev.json
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.dll
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\ref\StarterProject.dll
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\bin\Debug\net5.0\StarterProject.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.AssemblyInfoInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.AssemblyInfo.cs
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.csproj.CoreCompileInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.dll
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\ref\StarterProject.dll
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.genruntimeconfig.cache
+C:\Microsoft-Talent-Academy\SecondWeek\CSharpTutorials\StarterProject\obj\Debug\net5.0\StarterProject.csproj.AssemblyReference.cache
