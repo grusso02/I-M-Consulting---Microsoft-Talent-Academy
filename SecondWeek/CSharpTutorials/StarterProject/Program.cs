@@ -12,8 +12,7 @@ namespace StarterProject
         static void Main(string[] args)
         {
             Vehicle vehicle = new Vehicle(4);
-            Vehicle vehicle2 = vehicle;
-            Console.WriteLine(object.ReferenceEquals(vehicle, vehicle2));
+            Console.WriteLine(vehicle.wheels);
 
             Console.WriteLine("Inserisci il primo numero"); // Si Inserisce nello stream output
             string num1 = Console.ReadLine(); // Si Inserisce nello stream input

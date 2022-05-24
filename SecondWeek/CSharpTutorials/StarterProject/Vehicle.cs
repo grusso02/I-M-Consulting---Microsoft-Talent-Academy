@@ -33,5 +33,18 @@ namespace StarterProject.Helper
         #region Private fields
         private bool engineRunning;
         #endregion
+
+        private class Engine
+        {
+            public Engine() : this(0, 0) {}
+            public Engine(int _engRev, float _cvv)
+            {
+                engRev = _engRev;
+                cvv = _cvv;
+            }
+
+            int engRev;
+            float cvv;
+        }
     }
 }
