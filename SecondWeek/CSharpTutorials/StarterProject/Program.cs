@@ -12,11 +12,10 @@ namespace StarterProject
         /// <param name="args">Array di stringhe passate in input dalla riga di comando</param>
         static void Main(string[] args)
         {
-            staticExample();
+            Car car = new Car();
+            int ruote = car.Wheels;
 
-            Vehicle vehicle = new Vehicle(4);
-            vehicle.Wheels = 3;
-            Console.WriteLine(vehicle.Wheels);
+            staticExample();
 
             Console.WriteLine("Inserisci il primo numero"); // Si Inserisce nello stream output
             string num1 = Console.ReadLine(); // Si Inserisce nello stream input

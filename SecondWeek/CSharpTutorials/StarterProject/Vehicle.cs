@@ -10,9 +10,18 @@ namespace StarterProject.Helper
     /// Possiamo dichiarare una classe internal (utilizzabile solo all'interno del progetto) default
     /// o public (utilizzabile ancha da progetti esterni)
     /// </summary>
-    internal class Vehicle
+    public abstract class Vehicle
     {
+        //region rende il codice interno collassabile
+        #region Private fields
+        private int _wheels;
+        private float _speed;
+        private int _direction;
+        private bool _engineRunning;
+        #endregion
+
         #region Constructor
+        public Vehicle() {}
         public Vehicle(int wheels) : this(wheels, 0, 0, false) {}
         public Vehicle(int wheels, int speed, int direction, bool engineRunning)
         {
@@ -22,13 +31,6 @@ namespace StarterProject.Helper
             EngineRunning = engineRunning;
         }
         #endregion
-
-        //region rende il codice interno collassabile
-        #region Private fields
-        private int _wheels;
-        private float _speed;
-        private int _direction;
-        private bool _engineRunning;
 
         public int Wheels // Proprietà
         {
@@ -44,7 +46,6 @@ namespace StarterProject.Helper
         public float Speed { get => _speed; set => _speed = value; }
         public int Direction { get => _direction; set => _direction = value; }
         public bool EngineRunning { get => _engineRunning; set => _engineRunning = value; }
-        #endregion
 
         private class Engine
         {
@@ -58,5 +59,9 @@ namespace StarterProject.Helper
             int engRev;
             float cvv;
         }
+    }
+    public class Car : Vehicle
+    {
+        public Car() : base(4) {}
     }
 }
