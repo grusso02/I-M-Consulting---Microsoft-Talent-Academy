@@ -1,5 +1,6 @@
 ﻿using System;
 using StarterProject.Helper;
+using Infrastructure;
 
 namespace StarterProject
 {
@@ -11,8 +12,11 @@ namespace StarterProject
         /// <param name="args">Array di stringhe passate in input dalla riga di comando</param>
         static void Main(string[] args)
         {
+            staticExample();
+
             Vehicle vehicle = new Vehicle(4);
-            Console.WriteLine(vehicle.wheels);
+            vehicle.Wheels = 3;
+            Console.WriteLine(vehicle.Wheels);
 
             Console.WriteLine("Inserisci il primo numero"); // Si Inserisce nello stream output
             string num1 = Console.ReadLine(); // Si Inserisce nello stream input
@@ -24,6 +28,19 @@ namespace StarterProject
 
             ConsoleKeyInfo key = Console.ReadKey(); // Prende in input un tasto premuto sulla keyboard
             Console.WriteLine(key.KeyChar); // Stamp il valore (char) del tasto premuto
+        }
+        public static void staticExample()
+        {
+            Counter counter1 = new Counter();
+            Counter counter2 = new Counter();
+
+            Console.WriteLine(counter1.incrementValue()); // Print 1
+            Console.WriteLine(counter1.incrementValue()); // Print 2
+            Console.WriteLine(counter2.incrementValue()); // Print 1
+
+            Console.WriteLine(Counter.TotalCounter); // Print 2
+            Counter counter3 = new Counter();
+            Console.WriteLine(Counter.TotalCounter); // Print 3
         }
     }
 }
