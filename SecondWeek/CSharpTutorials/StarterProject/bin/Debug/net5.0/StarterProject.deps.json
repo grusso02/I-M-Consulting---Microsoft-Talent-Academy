@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "StarterProject/1.0.0": {
+        "dependencies": {
+          "DataLayer": "1.0.0",
+          "Infrastructure": "1.0.0"
+        },
         "runtime": {
           "StarterProject.dll": {}
+        }
+      },
+      "DataLayer/1.0.0": {
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "DataLayer.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "runtime": {
+          "Infrastructure.dll": {}
         }
       }
     }
   },
   "libraries": {
     "StarterProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
