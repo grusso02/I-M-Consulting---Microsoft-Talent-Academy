@@ -1,0 +1,16 @@
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.exe
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.deps.json
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.runtimeconfig.json
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.runtimeconfig.dev.json
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.dll
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\ref\SearchFlights.dll
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\bin\Debug\net5.0\SearchFlights.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.csproj.AssemblyReference.cache
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.GeneratedMSBuildEditorConfig.editorconfig
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.AssemblyInfoInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.AssemblyInfo.cs
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.csproj.CoreCompileInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.dll
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\ref\SearchFlights.dll
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\SearchFlights\SearchFlights\obj\Debug\net5.0\SearchFlights.genruntimeconfig.cache
