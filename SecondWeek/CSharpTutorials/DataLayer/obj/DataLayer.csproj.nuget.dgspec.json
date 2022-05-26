@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\DataLayer\\DataLayer.csproj": {}
+    "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\DataLayer\\DataLayer.csproj": {
+    "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\lstabile\\.nuget\\packages\\",
-        "outputPath": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\DataLayer\\obj\\",
+        "projectPath": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\utente\\.nuget\\packages\\",
+        "outputPath": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lstabile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -33,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -63,25 +62,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\lstabile\\.nuget\\packages\\",
-        "outputPath": "D:\\Materiale Corsi\\C Sharp\\C# Labs\\Labs\\CSharpTutorials\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\utente\\.nuget\\packages\\",
+        "outputPath": "C:\\Microsoft-Talent-Academy\\SecondWeek\\CSharpTutorials\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lstabile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -122,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Infrastructure;
 using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SearchFlights
 {
@@ -12,14 +13,17 @@ namespace SearchFlights
         {
             List<Flights> flights = new List<Flights>();
 
-            Console.WriteLine("Please insert Origin");
-            string origin = Console.ReadLine();
-            Console.WriteLine("Please insert Destination");
-            string destination = Console.ReadLine();
+            //Console.WriteLine("Please insert Origin");
+            //string origin = Console.ReadLine();
+            //Console.WriteLine("Please insert Destination");
+            //string destination = Console.ReadLine();
+            string origin = "new york ny";
+            string destination = "los angeles ca";
 
             ReadFile(flights, origin, destination);
             PrintNumFlights(flights);
-            PrintFlights(flights);
+            SortFlights(flights);
+            return;
         }
         public static void ReadFile(List<Flights> flights, string origin, string destination)
         {
@@ -41,41 +45,58 @@ namespace SearchFlights
                 }
             }
         }
-        public static void PrintFlights(List<Flights> flights)
+        public static void PrintNumFlights(List<Flights> flights)
+        {
+            double delayAvarage = flights.Average(a => a.DepDelay);
+            Console.WriteLine($"Founded {flights.Count} flights, with a delay avarage of {delayAvarage} minutes");
+        }
+        public static void SortFlights(List<Flights> flights)
         {
             Console.WriteLine("\n1 - From lowest delay\n2 - From highest delay");
             string chose = Console.ReadLine();
+            List<Flights> sorted = null;
             switch (chose)
             {
                 case "1":
-                    PrintFlightsOrdered(flights, 1);
+                    sorted = flights.OrderBy(x => x.DepDelay).ToList();
                     break;
                 case "2":
-                    PrintFlightsOrdered(flights, 2);
+                    sorted = flights.OrderByDescending(x => x.DepDelay).ToList();
                     break;
                 default:
                     Console.WriteLine("Wrong Input");
-                    PrintFlights(flights);
+                    SortFlights(flights);
                     break;
             }
-        }
-        public static void PrintFlightsOrdered(List<Flights> flights, int chose)
-        {
-            List<Flights> sorted = chose == 1 ? flights.OrderBy(x => x.DepDelay).ToList() : 
-                flights.OrderByDescending(x => x.DepDelay).ToList();
-
-            foreach (Flights flight in sorted)
-                Console.Write($"Carrier: {flight.Carrier}\t Dep_Delay: {flight.DepDelay}\t " +
-                    $"Arr_Delay: {flight.ArrDelay}\t Cancelled: {flight.Cancelled}\t Distance: {flight.Distance}\n");
-        }
-        public static void PrintNumFlights(List<Flights> flights)
-        {
-            int delayAvarage = 0;
+            PrintFlights(sorted, 1);
+            /*#region QUERY
             foreach (Flights flight in flights)
-                delayAvarage += flight.DepDelay;
-            delayAvarage /= flights.Count;
+                if (flight.ArrDelay > 300)                  // If else statement
+                    Console.WriteLine(flight.Carrier);
+            IEnumerable<string> matches = from flight in flights where flight.ArrDelay > 0 select flight.Carrier; //LINQ
+            var matches2 = flights
+                .Where(flight => flight.ArrDelay > 0)
+                .Select(filtered => filtered.Carrier); // Come viene risolto a Runtimeg
 
-            Console.WriteLine($"Founded {flights.Count} flights, with a delay avarage of {delayAvarage} minutes");
+            foreach (string carrier in matches)
+                Console.WriteLine(carrier);
+            #endregion*/
+        }
+        public static void PrintFlights(List<Flights> flights, int page)
+        {
+            int size = 10;
+            var pageditems = flights.Skip(10 * (page - 1)).Take(size);
+
+            while (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                foreach (var flight in pageditems)
+                    Console.Write($"Carrier: {flight.Carrier}\t Dep_Delay: {flight.DepDelay}\t " +
+                        $"Arr_Delay: {flight.ArrDelay}\t Cancelled: {flight.Cancelled}\t Distance: {flight.Distance}\n");
+                Console.WriteLine($"{page}/{flights.Count / size} / Press 'Enter' for next page\nPress 'Esc' to exit");
+                PrintFlights(flights, ++page);
+            }
+            if (Console.ReadKey().Key == ConsoleKey.Escape)
+                return;
         }
     }
 }

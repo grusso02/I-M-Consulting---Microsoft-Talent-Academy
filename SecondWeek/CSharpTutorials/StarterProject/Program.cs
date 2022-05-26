@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Infrastructure;
 using DataLayer;
+using System.Globalization;
 
 namespace StarterProject
 {
@@ -159,6 +160,15 @@ namespace StarterProject
             else
             {
                 Console.WriteLine($"Il libro di id 1 non è statpo trovato");
+            }
+        }
+        public static void EsempioLINQ()
+        {
+            var cultures = CultureInfo.GetCultures(CultureTypes.AllCultures); // Elenco di culture (lingue supportate dal sistema operativo)
+            foreach (var culture in cultures)
+            {
+                if (culture.NumberFormat.NumberDecimalSeparator == ",")
+                    Console.WriteLine(culture.Name);
             }
         }
     }
