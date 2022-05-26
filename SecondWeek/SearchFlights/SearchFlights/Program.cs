@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Infrastructure;
+using System.Linq;
 
 namespace SearchFlights
 {
@@ -17,6 +18,7 @@ namespace SearchFlights
             string destination = Console.ReadLine();
 
             ReadFile(flights, origin, destination);
+            PrintNumFlights(flights);
             PrintFlights(flights);
         }
         public static void ReadFile(List<Flights> flights, string origin, string destination)
@@ -32,7 +34,8 @@ namespace SearchFlights
                     while ((s = sr.ReadLine()) != null)
                     {
                         string[] splitted = s.Split(",");
-                        if (origin == splitted[1] && destination == splitted[2])
+                        if (origin.ToLower() == splitted[1].ToLower() &&
+                            destination.ToLower() == splitted[2].ToLower())
                             flights.Add(new Flights(splitted));
                     }
                 }
@@ -40,9 +43,39 @@ namespace SearchFlights
         }
         public static void PrintFlights(List<Flights> flights)
         {
+            Console.WriteLine("\n1 - From lowest delay\n2 - From highest delay");
+            string chose = Console.ReadLine();
+            switch (chose)
+            {
+                case "1":
+                    PrintFlightsOrdered(flights, 1);
+                    break;
+                case "2":
+                    PrintFlightsOrdered(flights, 2);
+                    break;
+                default:
+                    Console.WriteLine("Wrong Input");
+                    PrintFlights(flights);
+                    break;
+            }
+        }
+        public static void PrintFlightsOrdered(List<Flights> flights, int chose)
+        {
+            List<Flights> sorted = chose == 1 ? flights.OrderBy(x => x.DepDelay).ToList() : 
+                flights.OrderByDescending(x => x.DepDelay).ToList();
+
+            foreach (Flights flight in sorted)
+                Console.Write($"Carrier: {flight.Carrier}\t Dep_Delay: {flight.DepDelay}\t " +
+                    $"Arr_Delay: {flight.ArrDelay}\t Cancelled: {flight.Cancelled}\t Distance: {flight.Distance}\n");
+        }
+        public static void PrintNumFlights(List<Flights> flights)
+        {
+            int delayAvarage = 0;
             foreach (Flights flight in flights)
-                Console.Write("Carrier: {0}\t Dep_Delay: {1}\t Arr_Delay: {2}\t Cancelles: {3}\t Distance: {4}\n",
-                    flight.Carrier, flight.DepDelay, flight.ArrDelay, flight.Cancelled, flight.Distance);
+                delayAvarage += flight.DepDelay;
+            delayAvarage /= flights.Count;
+
+            Console.WriteLine($"Founded {flights.Count} flights, with a delay avarage of {delayAvarage} minutes");
         }
     }
 }

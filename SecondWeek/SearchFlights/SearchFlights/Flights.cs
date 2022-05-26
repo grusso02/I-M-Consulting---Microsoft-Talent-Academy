@@ -28,15 +28,14 @@ namespace Infrastructure
                 _depDelay = 0;
             _cancelled = Convert.ToBoolean(Convert.ToInt32(splitted[5]));
             _distance = Convert.ToDouble(splitted[6]);
-
         }
 
-        public string Carrier { get; }
-        public string OriginCyteName { get; }
-        public string DestCyteName { get; }
-        public int DepDelay { get; }
-        public int ArrDelay { get; }
-        public bool Cancelled { get; }
-        public double Distance { get; }
+        public string Carrier { get => _carrier; }
+        public string OriginCyteName { get => _originCyteName; }
+        public string DestCyteName { get => _destCyteName; }
+        public int DepDelay { get => _depDelay; }
+        public int ArrDelay { get => _arrDelay; }
+        public bool Cancelled { get => _cancelled; }
+        public double Distance { get => _distance; }
     }
 }
