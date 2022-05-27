@@ -13,12 +13,10 @@ namespace SearchFlights
         {
             List<Flights> flights = new List<Flights>();
 
-            //Console.WriteLine("Please insert Origin");
-            //string origin = Console.ReadLine();
-            //Console.WriteLine("Please insert Destination");
-            //string destination = Console.ReadLine();
-            string origin = "new york ny";
-            string destination = "los angeles ca";
+            Console.WriteLine("Please insert Origin");
+            string origin = Console.ReadLine();
+            Console.WriteLine("Please insert Destination");
+            string destination = Console.ReadLine();
 
             ReadFile(flights, origin, destination);
             PrintNumFlights(flights);
@@ -84,18 +82,19 @@ namespace SearchFlights
         }
         public static void PrintFlights(List<Flights> flights, int page)
         {
-            int size = 10;
-            var pageditems = flights.Skip(10 * (page - 1)).Take(size);
+            if (page > flights.Count / 10)
+                return;
+            var pageditems = flights.Skip(10 * (page - 1)).Take(10);
 
-            while (Console.ReadKey().Key == ConsoleKey.Enter)
-            {
-                foreach (var flight in pageditems)
-                    Console.Write($"Carrier: {flight.Carrier}\t Dep_Delay: {flight.DepDelay}\t " +
-                        $"Arr_Delay: {flight.ArrDelay}\t Cancelled: {flight.Cancelled}\t Distance: {flight.Distance}\n");
-                Console.WriteLine($"{page}/{flights.Count / size} / Press 'Enter' for next page\nPress 'Esc' to exit");
+            Console.WriteLine($"{page}/{flights.Count / 10}");
+            foreach (var flight in pageditems)
+                Console.Write($"Carrier: {flight.Carrier}\t Dep_Delay: {flight.DepDelay}\t " +
+                    $"Arr_Delay: {flight.ArrDelay}\t Cancelled: {flight.Cancelled}\t Distance: {flight.Distance}\n");
+            Console.WriteLine("Press 'Enter' for next page\nPress 'Esc' to exit\n");
+            var key = Console.ReadKey().Key;
+            if (key == ConsoleKey.Enter)
                 PrintFlights(flights, ++page);
-            }
-            if (Console.ReadKey().Key == ConsoleKey.Escape)
+            else if (key == ConsoleKey.Escape)
                 return;
         }
     }
