@@ -19,7 +19,9 @@ namespace SearchFlights
             string destination = Console.ReadLine();
 
             ReadFile(flights, origin, destination);
+            ReadSameFlights(flights);
             PrintNumFlights(flights);
+            PrintGroupCarrier(flights);
             SortFlights(flights);
             return;
         }
@@ -45,8 +47,19 @@ namespace SearchFlights
         }
         public static void PrintNumFlights(List<Flights> flights)
         {
-            double delayAvarage = flights.Average(a => a.DepDelay);
-            Console.WriteLine($"Founded {flights.Count} flights, with a delay avarage of {delayAvarage} minutes");
+            double depDelayAvarage = flights.Average(a => a.DepDelay);
+            Console.WriteLine($"\nFounded {flights.Count} flights, with a departure delay avarage of {depDelayAvarage} minutes");
+        }
+        public static void PrintGroupCarrier(List<Flights> flights)
+        {
+            Console.WriteLine("Flights for Airline Code:");
+            var groupedFlights = from flight in flights
+                                 group flight by flight.Carrier
+                                 into lineCode
+                                 select $"Lines {lineCode.Key} contains {lineCode.Count()} flights";
+
+            foreach (var lineCode in groupedFlights)
+                Console.WriteLine(lineCode);
         }
         public static void SortFlights(List<Flights> flights)
         {
@@ -96,6 +109,29 @@ namespace SearchFlights
                 PrintFlights(flights, ++page);
             else if (key == ConsoleKey.Escape)
                 return;
+        }
+        public static void GroupByCarrier(List<Flights> flights)
+        {
+            // Sintassi query
+            var groupAirlines = from airline in flights
+                                group airline by airline.Carrier
+                                into code
+                                select $"La linea {code.Key} ha i seguenti voli {code.Count()}";
+
+            // Corrispondente invocazione di metodi
+            //var groupAirlines = flights.GroupBy(flight => flight.Carrier, flight => flight.ArrDelay);
+
+            //groupAirlines = flights
+            //.GroupBy(flight => flight.Carrier, flight => flight)
+            //.Select(airline => $"La linea {airline.Key} ha i seguenti voli {airline.Count()}");
+
+            //groupAirlines = from airline in flights
+            //                group airline by new { airline.Carrier, airline.ArrDelay }
+            //                into code
+            //                select $"La linea {code.Key.Carrier} con il ritardo {code.Key.ArrDelay} ha i seguenti voli {code.Count()}";
+
+            foreach (var item in groupAirlines)
+                Console.WriteLine(item);
         }
     }
 }
