@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CSharpTutorials",
     "\\CSharpTutorials\\DataLayer",
     "\\CSharpTutorials\\DataLayer\\bin",
     "\\CSharpTutorials\\DataLayer\\bin\\Debug",
     "\\CSharpTutorials\\DataLayer\\bin\\Debug\\net5.0"
   ],
-  "SelectedNode": "\\CSharpTutorials\\DataLayer\\BookDAL.cs",
   "PreviewInSolutionExplorer": false
 }

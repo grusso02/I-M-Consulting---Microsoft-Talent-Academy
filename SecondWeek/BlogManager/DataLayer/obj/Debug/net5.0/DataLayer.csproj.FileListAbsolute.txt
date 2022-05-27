@@ -1,0 +1,15 @@
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\DataLayer.deps.json
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\DataLayer.dll
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\ref\DataLayer.dll
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\DataLayer.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\Infrastructure.dll
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\bin\Debug\net5.0\Infrastructure.pdb
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.csproj.AssemblyReference.cache
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfoInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfo.cs
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.csproj.CopyComplete
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.dll
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\ref\DataLayer.dll
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\DataLayer\obj\Debug\net5.0\DataLayer.pdb
