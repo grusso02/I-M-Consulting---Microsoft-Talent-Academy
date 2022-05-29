@@ -21,3 +21,4 @@ C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\BlogManager\obj\Debug\net5.0-
 C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\BlogManager\obj\Debug\net5.0-windows\ref\BlogManager.dll
 C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\BlogManager\obj\Debug\net5.0-windows\BlogManager.pdb
 C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\BlogManager\obj\Debug\net5.0-windows\BlogManager.genruntimeconfig.cache
+C:\Microsoft-Talent-Academy\SecondWeek\BlogManager\BlogManager\obj\Debug\net5.0-windows\BlogManager.Form2.resources
