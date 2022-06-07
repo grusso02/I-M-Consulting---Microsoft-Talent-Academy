@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo1", "Modulo1\Modulo1.ssmssqlproj", "{DF5D3F73-7AF5-455C-B952-AFFC6E2FC1D5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo2", "Modulo2\Modulo2.ssmssqlproj", "{D35C99E3-7FC5-4DB4-94AB-6E2275001DD5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo3", "Modulo3\Modulo3.ssmssqlproj", "{88A21536-EEFE-4C6B-97AD-199015CE51B3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo4", "Modulo4\Modulo4.ssmssqlproj", "{133FD6DE-878C-4B50-8ACF-15D9051ABFB2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo5", "Modulo5\Modulo5.ssmssqlproj", "{E5636E93-3233-4079-B50A-E755164FE6B4}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo6", "Modulo6\Modulo6.ssmssqlproj", "{F63FD984-9DED-4F97-A365-F10D07C9187D}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo7", "Modulo7\Modulo7.ssmssqlproj", "{5EA90669-44B0-43E3-8AA9-B6BFF3F6212E}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo8", "Modulo8\Modulo8.ssmssqlproj", "{30E65DFB-E902-49B5-8DF0-4C18AF4E533E}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo10", "Modulo10\Modulo10.ssmssqlproj", "{A0459B5E-9DDA-46E3-BD92-1F77CC775FCE}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Modulo11", "Modulo11\Modulo11.ssmssqlproj", "{5D01D14B-B604-4C2A-9D32-C54C1802F676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF5D3F73-7AF5-455C-B952-AFFC6E2FC1D5}.Default|Default.ActiveCfg = Default
+		{D35C99E3-7FC5-4DB4-94AB-6E2275001DD5}.Default|Default.ActiveCfg = Default
+		{88A21536-EEFE-4C6B-97AD-199015CE51B3}.Default|Default.ActiveCfg = Default
+		{133FD6DE-878C-4B50-8ACF-15D9051ABFB2}.Default|Default.ActiveCfg = Default
+		{E5636E93-3233-4079-B50A-E755164FE6B4}.Default|Default.ActiveCfg = Default
+		{F63FD984-9DED-4F97-A365-F10D07C9187D}.Default|Default.ActiveCfg = Default
+		{5EA90669-44B0-43E3-8AA9-B6BFF3F6212E}.Default|Default.ActiveCfg = Default
+		{30E65DFB-E902-49B5-8DF0-4C18AF4E533E}.Default|Default.ActiveCfg = Default
+		{80E5E8FE-CC40-4D06-9CFC-EEAC1EE1881B}.Default|Default.ActiveCfg = Default
+		{A0459B5E-9DDA-46E3-BD92-1F77CC775FCE}.Default|Default.ActiveCfg = Default
+		{5D01D14B-B604-4C2A-9D32-C54C1802F676}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {033985AD-23A5-4052-83A6-13DB06F25A8C}
+	EndGlobalSection
+EndGlobal
