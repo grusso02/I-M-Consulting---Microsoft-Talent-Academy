@@ -1,4 +1,5 @@
 ﻿using AcademyWebApp.Models;
+using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,23 @@ namespace AcademyWebApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IRandomService _randomService;
+        private readonly IRandomWrapper _randomWrapper;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger
+            , IRandomService randomService
+            , IRandomWrapper randomWrapper)
         {
             _logger = logger;
+            this._randomService = randomService;
+            this._randomWrapper = randomWrapper;
         }
 
         public IActionResult Index()
         {
-            return View();
+            string message = $"Wrapper è {_randomWrapper.GenerateNumber()}\nService è: {_randomService.GenerateNumber()}";
+            var model = new HomeViewModel { Heading = "Dependency Injection Test", Body = message };
+            return View(model);
         }
 
         public IActionResult Privacy()

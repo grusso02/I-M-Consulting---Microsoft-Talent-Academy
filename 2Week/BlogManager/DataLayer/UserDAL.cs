@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class UserDAL
+    public class UserDAL : IUserDAL
     {
         private readonly string _url = "https://jsonplaceholder.typicode.com/users";
 

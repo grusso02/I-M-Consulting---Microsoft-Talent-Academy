@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace AcademyWebApp.Controllers
 {
-    public class PostsController : Controller
+    public class UsersController : Controller
     {
-        private readonly IPostDAL _postDAL;
-        public PostsController(IPostDAL postDAL)
+        private readonly IUserDAL _userDAL;
+        public UsersController(IUserDAL userDAL)
         {
-            this._postDAL = postDAL;
+            this._userDAL = userDAL;
         }
         //Attribute based routing
-        [HttpGet("listaposts/{id:int?}")]
+        [HttpGet("listausers/{id:int?}")]
         public async Task<IActionResult> IndexAsync(int? id)
         {
             if (id.HasValue)
                 ViewData["Header"] = id;
             else
                 ViewData["Header"] = "id empty";
-            var model = (await _postDAL.GetPostsAsync()).Where(p => !id.HasValue || p.userId == id.Value);
+            var model = (await _userDAL.GetUsersAsync()).Where(p => !id.HasValue || p.id == id.Value);
             return View(model);
         }
     }
