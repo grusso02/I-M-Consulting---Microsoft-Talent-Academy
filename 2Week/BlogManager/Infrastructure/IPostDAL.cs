@@ -9,5 +9,6 @@ namespace Infrastructure
     public interface IPostDAL
     {
         Task<IEnumerable<Post>> GetPostsAsync();
+        List<Post> Posts { get; }
     }
 }

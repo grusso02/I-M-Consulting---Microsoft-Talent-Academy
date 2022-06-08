@@ -120,3 +120,6 @@ C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\bin\Debug\net5.0\D
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\bin\Debug\net5.0\DataLayer.pdb
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Index.cshtml.g.cs
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\Index.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Edit.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Details.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Create.cshtml.g.cs

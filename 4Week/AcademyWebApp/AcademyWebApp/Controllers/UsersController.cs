@@ -25,5 +25,9 @@ namespace AcademyWebApp.Controllers
             var model = (await _userDAL.GetUsersAsync()).Where(p => !id.HasValue || p.id == id.Value);
             return View(model);
         }
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
     }
 }
