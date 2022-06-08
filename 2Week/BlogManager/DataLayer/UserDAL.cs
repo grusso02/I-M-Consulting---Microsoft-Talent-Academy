@@ -1,6 +1,7 @@
 ﻿using Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -10,6 +11,12 @@ namespace DataLayer
     public class UserDAL : IUserDAL
     {
         private readonly string _url = "https://jsonplaceholder.typicode.com/users";
+        private List<User> _users;
+        public List<User> Users { get { return _users; } }
+        public UserDAL()
+        {
+            _users = GetUsersAsync().Result.ToList();
+        }
 
         public async Task<IEnumerable<User>> GetUsersAsync()
         {

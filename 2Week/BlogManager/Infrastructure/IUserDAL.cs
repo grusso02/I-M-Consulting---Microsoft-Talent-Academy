@@ -9,5 +9,6 @@ namespace Infrastructure
     public interface IUserDAL
     {
         Task<IEnumerable<User>> GetUsersAsync();
+        List<User> Users { get; }
     }
 }

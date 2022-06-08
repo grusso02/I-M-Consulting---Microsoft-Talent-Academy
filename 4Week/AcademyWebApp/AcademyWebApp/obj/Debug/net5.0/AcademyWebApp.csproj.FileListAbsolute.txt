@@ -123,3 +123,6 @@ C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\R
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Edit.cshtml.g.cs
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Details.cshtml.g.cs
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Posts\Create.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\Edit.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\Details.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\Create.cshtml.g.cs
