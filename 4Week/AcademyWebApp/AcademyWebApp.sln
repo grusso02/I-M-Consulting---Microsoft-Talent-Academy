@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyWebApp", "AcademyWebApp\AcademyWebApp.csproj", "{E3F53D3C-5F08-4027-9E21-F9889C999A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcademyWebApp", "AcademyWebApp\AcademyWebApp.csproj", "{E3F53D3C-5F08-4027-9E21-F9889C999A6E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\..\2Week\BlogManager\Infrastructure\Infrastructure.csproj", "{A28EFC37-FCAD-44FF-B59B-032BDD63B36A}"
 EndProject

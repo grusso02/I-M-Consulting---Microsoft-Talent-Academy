@@ -13,53 +13,60 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.id)
+                @Html.ActionLink("Id", "Index",
+                new { colId = 1, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                @Html.ActionLink("Name", "Index",
+                new { colId = 2, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.username)
+                @Html.ActionLink("Username", "Index",
+                new { colId = 3, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.email)
+                @Html.ActionLink("Email", "Index",
+                new { colId = 4, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.phone)
+                @Html.ActionLink("Phone", "Index",
+                new { colId = 5, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.website)
+                @Html.ActionLink("Website", "Index",
+                new { colId = 6, CurrentSort = ViewBag.CurrentSort })
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.website)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.id })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.website)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

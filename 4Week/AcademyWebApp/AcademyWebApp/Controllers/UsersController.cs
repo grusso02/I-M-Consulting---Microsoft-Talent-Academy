@@ -16,13 +16,40 @@ namespace AcademyWebApp.Controllers
         }
         //Attribute based routing
         [HttpGet("listausers/{id:int?}")]
-        public IActionResult Index(int? id)
+        public IActionResult Index(int? id, int? colId, string CurrentSort)
         {
+            CurrentSort = String.IsNullOrEmpty(CurrentSort) ? "ASC" : CurrentSort;
+            colId = colId == null ? 0 : colId;
             if (id.HasValue)
                 ViewData["Header"] = id;
             else
                 ViewData["Header"] = "id empty";
             var model = _userDAL.Users.Where(u => !id.HasValue || u.id == id.Value);
+            switch (colId)
+            {
+                case 1:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.id) : model.OrderBy(m => m.id);
+                    break;
+                case 2:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.name) : model.OrderBy(m => m.name);
+                    break;
+                case 3:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.username) : model.OrderBy(m => m.username);
+                    break;
+                case 4:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.email) : model.OrderBy(m => m.email);
+                    break;
+                case 5:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.phone) : model.OrderBy(m => m.phone);
+                    break;
+                case 6:
+                    model = CurrentSort == "DESC" ? model.OrderByDescending(m => m.website) : model.OrderBy(m => m.website);
+                    break;
+                case 0:
+                    model = model.OrderBy(m => m.name);
+                    break;
+            }
+            ViewBag.CurrentSort = CurrentSort == "DESC" ? "ASC" : "DESC";
             return View(model);
         }
         [HttpGet]

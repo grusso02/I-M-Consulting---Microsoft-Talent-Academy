@@ -29,7 +29,7 @@ namespace AcademyWebApp
             services.AddSingleton<IUserDAL, UserDAL>();
             services.AddTransient<IRandomService, RandomService>();
             services.AddTransient<IRandomWrapper, WrapperClass>();
-
+            services.AddScoped<IAdventureWorksDAL, AdventureWorksDAL>(provider => new AdventureWorksDAL(Configuration.GetConnectionString("AdventureWorksLT2019")));
             services.AddControllersWithViews();
         }
 
@@ -55,11 +55,6 @@ namespace AcademyWebApp
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "blog",
-                    pattern: "listaposts",
-                    defaults: new { controller = "Posts", action = "Index" });
-
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id:int?}");

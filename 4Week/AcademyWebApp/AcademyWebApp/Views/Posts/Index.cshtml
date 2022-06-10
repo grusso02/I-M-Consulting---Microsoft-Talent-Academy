@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Infrastructure.Post>
+﻿@model IPagedList<Infrastructure.Post>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
 
 @{
     ViewData["Title"] = "Index";
@@ -13,16 +15,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.userId)
+                @Html.DisplayNameFor(model => model.First().userId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.id)
+                @Html.DisplayNameFor(model => model.First().id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.title)
+                @Html.DisplayNameFor(model => model.First().title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.body)
+                @Html.DisplayNameFor(model => model.First().body)
             </th>
             <th></th>
         </tr>
@@ -52,4 +54,4 @@
         }
     </tbody>
 </table>
-
+@Html.PagedListPager(Model, page => Url.Action("Index", "Posts", new { page }))

@@ -1,4 +1,4 @@
-﻿@model Infrastructure.Post
+﻿@model PostViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -12,21 +12,21 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input asp-for="id" class="form-control" type="hidden" />
+            <input asp-for="Item.id" class="form-control" type="hidden" />
             <div class="form-group">
-                <label asp-for="userId" class="control-label"></label>
-                <input asp-for="userId" class="form-control" />
-                <span asp-validation-for="userId" class="text-danger"></span>
+                <label asp-for="Item.userId" class="control-label"></label>
+                <select asp-for="Item.userId" asp-items="Model.Users" class="form-control"></select>
+                <span asp-validation-for="Item.userId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="title" class="control-label"></label>
-                <input asp-for="title" class="form-control" />
-                <span asp-validation-for="title" class="text-danger"></span>
+                <label asp-for="Item.title" class="control-label"></label>
+                <input asp-for="Item.title" class="form-control" />
+                <span asp-validation-for="Item.title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="body" class="control-label"></label>
-                <textarea asp-for="body" class="form-control"></textarea>
-                <span asp-validation-for="body" class="text-danger"></span>
+                <label asp-for="Item.body" class="control-label"></label>
+                <textarea asp-for="Item.body" class="form-control"></textarea>
+                <span asp-validation-for="Item.body" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
