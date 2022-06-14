@@ -21,7 +21,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ProductListComponent
   ],
   bootstrap: [
-    AppComponent
+    AppComponent,
+    ProductListComponent
   ]
 })
 export class AppModule { }
