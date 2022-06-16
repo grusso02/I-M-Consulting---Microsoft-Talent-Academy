@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { City, cities } from 'src/models/cities';
 import { Province, provinces } from 'src/models/provinces';
 import { regions } from '../../models/regions';
@@ -20,7 +20,7 @@ export class ItemPickerComponent implements OnInit {
   trigCity = 0;
   trigTable = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -37,5 +37,9 @@ export class ItemPickerComponent implements OnInit {
     this.cityDisplay = cities.filter(p => p.IdProvincia == Number(idProv));
     this.trigCity = 1;
   }
+
+  getIdCity(): void {
+    
+  } 
 
 }
