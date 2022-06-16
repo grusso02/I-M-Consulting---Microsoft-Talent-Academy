@@ -1,81 +1,81 @@
 export interface City {
-	id: number;
-	name: string;
-	nResidents: number;
-	idProvince: number;
+	ID: number;
+	Name: string;
+	numAbitanti: number;
+	IdProvincia: number;
 }
 
 export const cities = [
 	{
-		id: 1,
-		name: "Corleone",
-		nResidents: 3,
-		idProvince: 1
+		ID: 1,
+		Name: "Corleone",
+		numAbitanti: 3,
+		IdProvincia: 1
 	},
 	{
-		id: 2,
-		name: "Cinisi",
-		nResidents: 4,
-		idProvince: 1
+		ID: 2,
+		Name: "Cinisi",
+		numAbitanti: 4,
+		IdProvincia: 1
 	},
 	{
-		id: 3,
-		name: "Castelvetrano",
-		nResidents: 4,
-		idProvince: 2
+		ID: 3,
+		Name: "Castelvetrano",
+		numAbitanti: 4,
+		IdProvincia: 2
 	},
 	{
-		id: 4,
-		name: "Marsala",
-		nResidents: 4,
-		idProvince: 2
+		ID: 4,
+		Name: "Marsala",
+		numAbitanti: 4,
+		IdProvincia: 2
 	},
 	{
-		id: 5,
-		name: "Fregene",
-		nResidents: 7,
-		idProvince: 3
+		ID: 5,
+		Name: "Fregene",
+		numAbitanti: 7,
+		IdProvincia: 3
 	},
 	{
-		id: 6,
-		name: "Fiumicino",
-		nResidents: 5,
-		idProvince: 3
+		ID: 6,
+		Name: "Fiumicino",
+		numAbitanti: 5,
+		IdProvincia: 3
 	},
 	{
-		id: 7,
-		name: "Cittaducale",
-		nResidents: 2,
-		idProvince: 4
+		ID: 7,
+		Name: "Cittaducale",
+		numAbitanti: 2,
+		IdProvincia: 4
 	},
 	{
-		id: 8,
-		name: "Borgorose",
-		nResidents: 1,
-		idProvince: 4
+		ID: 8,
+		Name: "Borgorose",
+		numAbitanti: 1,
+		IdProvincia: 4
 	},
 	{
-		id: 9,
-		name: "Legnano",
-		nResidents: 30,
-		idProvince: 5
+		ID: 9,
+		Name: "Legnano",
+		numAbitanti: 30,
+		IdProvincia: 5
 	},
 	{
-		id: 10,
-		name: "Rho",
-		nResidents: 22,
-		idProvince: 5
+		ID: 10,
+		Name: "Rho",
+		numAbitanti: 22,
+		IdProvincia: 5
 	},
 	{
-		id: 11,
-		name: "Crema",
-		nResidents: 17,
-		idProvince: 6
+		ID: 11,
+		Name: "Crema",
+		numAbitanti: 17,
+		IdProvincia: 6
 	},
 	{
-		id: 12,
-		name: "Casalmaggiore",
-		nResidents: 13,
-		idProvince: 6
+		ID: 12,
+		Name: "Casalmaggiore",
+		numAbitanti: 13,
+		IdProvincia: 6
 	}
 ]

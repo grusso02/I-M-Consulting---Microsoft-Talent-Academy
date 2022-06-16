@@ -1,0 +1,32 @@
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-sm-4 my-column">
+			<h3>Regione</h3>
+			<select name="Region" (change)="onRegionSelected($event)">
+				<option [value]="null">Select a Region</option>
+				<option [value]="region.ID" *ngFor="let region of regions">{{ region.Name }}</option>
+			</select>
+		</div>
+
+		<div *ngIf="trigProv" class="col-sm-4 my-column">
+			<h3>Province</h3>
+			<select name="Province" (change)="onProvinceSelected($event)">
+				<option [value]="null">Select a Province</option>
+				<option [value]="province.ID" *ngFor="let province of provinceDisplay">{{ province.Name }}</option>
+			</select>
+		</div>
+
+		<div *ngIf="trigCity" class="col-sm-4 my-column">
+			<h3>Province</h3>
+			<select name="City">
+				<option [value]="null">Select a City</option>
+				<option [value]="city.ID" *ngFor="let city of cityDisplay">{{ city.Name }}</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col my-column">
+			<button type="button" class="my-btn btn btn-primary" (click)="onBtnClick()">Show table</button>
+		</div>
+	</div>
+</div>
