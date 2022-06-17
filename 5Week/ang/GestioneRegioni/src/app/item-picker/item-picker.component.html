@@ -9,7 +9,7 @@
 		</div>
 
 		<div *ngIf="trigProv" class="col-sm-4 my-column">
-			<h3>Province</h3>
+			<h3>Provincia</h3>
 			<select name="Province" (change)="onProvinceSelected($event)">
 				<option [value]="null">Select a Province</option>
 				<option [value]="province.ID" *ngFor="let province of provinceDisplay">{{ province.Name }}</option>
@@ -17,16 +17,16 @@
 		</div>
 
 		<div *ngIf="trigCity" class="col-sm-4 my-column">
-			<h3>Province</h3>
-			<select name="City">
+			<h3>Comune</h3>
+			<select name="City" (change)="onCitySelected($event)">
 				<option [value]="null">Select a City</option>
 				<option [value]="city.ID" *ngFor="let city of cityDisplay">{{ city.Name }}</option>
 			</select>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" *ngIf="idCity">
 		<div class="col my-column">
-			<a [routerLink]="['/table', getIdCity()]"><button type="button" class="my-btn btn btn-primary">Show table</button></a>
+			<button [routerLink]="['/table', idCity]" type="button" class="my-btn btn btn-primary">Show table</button>
 		</div>
 	</div>
 </div>

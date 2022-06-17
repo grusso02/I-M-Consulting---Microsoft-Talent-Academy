@@ -15,6 +15,7 @@ export class ItemPickerComponent implements OnInit {
   regions = regions;
   provinceDisplay: Province[] | undefined;
   cityDisplay: City[] | undefined;
+  idCity: Number = 0;
 
   trigProv = 0;
   trigCity = 0;
@@ -38,8 +39,8 @@ export class ItemPickerComponent implements OnInit {
     this.trigCity = 1;
   }
 
-  getIdCity(): void {
-    
-  } 
+  onCitySelected(event: any): void {
+    this.idCity = event.target.value;
+  }
 
 }
