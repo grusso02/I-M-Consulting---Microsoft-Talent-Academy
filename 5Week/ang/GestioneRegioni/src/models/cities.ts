@@ -5,7 +5,7 @@ export interface City {
 	IdProvincia: number;
 }
 
-export const cities = [
+/* export const cities = [
 	{
 		ID: 1,
 		Name: "Corleone",
@@ -78,4 +78,4 @@ export const cities = [
 		numAbitanti: 13,
 		IdProvincia: 6
 	}
-]
+] */

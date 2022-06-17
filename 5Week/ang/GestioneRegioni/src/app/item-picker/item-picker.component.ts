@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { City, cities } from 'src/models/cities';
-import { Province, provinces } from 'src/models/provinces';
-import { regions } from '../../models/regions';
+import { City } from 'src/models/cities';
+import { Province } from 'src/models/provinces';
+import { Region } from '../../models/regions';
+import { RestApiService } from 'src/services/rest-api.service';
 
 @Component({
   selector: 'app-item-picker',
@@ -12,7 +13,11 @@ import { regions } from '../../models/regions';
 
 export class ItemPickerComponent implements OnInit {
 
-  regions = regions;
+  constructor(private router: Router, private callApiServices: RestApiService) { }
+
+  reg = {} as Region[];
+
+  regions = this.callApiServices.getAllRegionsFromApi();
   provinceDisplay: Province[] | undefined;
   cityDisplay: City[] | undefined;
   idCity: Number = 0;
@@ -20,8 +25,6 @@ export class ItemPickerComponent implements OnInit {
   trigProv = 0;
   trigCity = 0;
   trigTable = 0;
-
-  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }

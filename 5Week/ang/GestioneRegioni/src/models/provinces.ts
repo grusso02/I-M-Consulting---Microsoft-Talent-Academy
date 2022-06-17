@@ -6,7 +6,7 @@ export interface Province {
 	IdRegione: number;
 }
 
-export const provinces = [
+/* export const provinces = [
 	{
 		ID: 1,
 		Name: "Palermo",
@@ -49,4 +49,4 @@ export const provinces = [
 		isCapoluogo: false,
 		IdRegione: 3
 	},
-]
+] */

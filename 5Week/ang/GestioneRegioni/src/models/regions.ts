@@ -5,7 +5,7 @@ export interface Region {
 	isAutonoma: boolean;
 }
 
-export const regions = [
+/* export const regions = [
 	{
 		ID: 1,
 		Name: "Sicilia",
@@ -24,4 +24,4 @@ export const regions = [
 		numAbitanti: 300,
 		isAutonoma: true
 	}
-]
+] */

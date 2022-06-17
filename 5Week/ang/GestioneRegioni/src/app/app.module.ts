@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemPickerComponent } from './item-picker/item-picker.component';
-import { TableDetailsComponent } from './table-details/table-details.component';
+import { ViewDataComponent } from './view-data/view-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemPickerComponent,
-    TableDetailsComponent
+    ViewDataComponent,
   ],
   imports: [
     BrowserModule,
