@@ -116,9 +116,9 @@ namespace AcademyWebApp.Controllers
             return View(model);
         }
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login([FromQuery]string ReturnUrl)
         {
-            return View();
+            return View(new LoginViewModel { ReturnUrl = ReturnUrl });
         }
         [HttpPost]
         public async Task<IActionResult> LoginAsync(LoginViewModel model)
@@ -127,7 +127,11 @@ namespace AcademyWebApp.Controllers
             {
                 var result = await _signinManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
                 if (result.Succeeded)
-                    return RedirectToAction("Index", "Home");
+                {
+                    if (string.IsNullOrEmpty(model.ReturnUrl))
+                        return RedirectToAction("Index", "Home");
+                    return Redirect(model.ReturnUrl);
+                }
             }
             return View(model);
         }

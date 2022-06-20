@@ -1,5 +1,6 @@
 ﻿using AcademyWebApp.Models;
 using Infrastructure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +12,7 @@ using X.PagedList;
 
 namespace AcademyWebApp.Controllers
 {
+    [Authorize]
     public class PostsController : Controller
     {
         private readonly IPostDAL _postDAL;

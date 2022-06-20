@@ -49,6 +49,12 @@ namespace AcademyWebApp
                 options.Password.RequiredLength = 0;
                 options.Password.RequireUppercase = false;
             });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                options.LoginPath = "/Users/Login";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

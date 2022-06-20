@@ -173,3 +173,5 @@ C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\R
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\Login.cshtml.g.cs
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\ForgotPassword.cshtml.g.cs
 C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Users\ResetPassword.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Roles\Index.cshtml.g.cs
+C:\Microsoft-Talent-Academy\4Week\AcademyWebApp\AcademyWebApp\obj\Debug\net5.0\Razor\Views\Roles\Create.cshtml.g.cs
