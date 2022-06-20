@@ -1,8 +1,11 @@
 using DataLayer;
+using DataLayer.Identity;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,8 +32,23 @@ namespace AcademyWebApp
             services.AddSingleton<IUserDAL, UserDAL>();
             services.AddTransient<IRandomService, RandomService>();
             services.AddTransient<IRandomWrapper, WrapperClass>();
-            services.AddScoped<IAdventureWorksDAL, AdventureWorksDAL>(provider => new AdventureWorksDAL(Configuration.GetConnectionString("AdventureWorksLT2019")));
+            //services.AddScoped<IAdventureWorksDAL, AdventureWorksDAL>(provider => new AdventureWorksDAL(Configuration.GetConnectionString("AdventureWorksLT2019")));
             services.AddControllersWithViews();
+            services.AddDbContext<AuthenticationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CorsoAcademyDB")));
+
+            // Configuro gli oggetti UserManager e SignInManager che si appogguano all'oggetto entity framework AuthenticationDbContext
+            services.AddIdentity<User, Role>()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<AuthenticationDbContext>();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 0;
+                options.Password.RequireUppercase = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +69,7 @@ namespace AcademyWebApp
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
