@@ -54,6 +54,7 @@ namespace AcademyWebApp
             {
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
                 options.LoginPath = "/Users/Login";
+                options.AccessDeniedPath = "/Users/AccessDenied";
             });
         }
 

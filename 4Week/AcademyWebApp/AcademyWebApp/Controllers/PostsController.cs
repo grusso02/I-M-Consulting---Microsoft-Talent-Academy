@@ -12,7 +12,7 @@ using X.PagedList;
 
 namespace AcademyWebApp.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrators")]
     public class PostsController : Controller
     {
         private readonly IPostDAL _postDAL;

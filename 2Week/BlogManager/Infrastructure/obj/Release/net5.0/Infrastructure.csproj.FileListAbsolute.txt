@@ -1,0 +1,12 @@
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\bin\Release\net5.0\Infrastructure.deps.json
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\bin\Release\net5.0\Infrastructure.dll
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\bin\Release\net5.0\ref\Infrastructure.dll
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\bin\Release\net5.0\Infrastructure.pdb
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.dll
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\ref\Infrastructure.dll
+C:\Microsoft-Talent-Academy\2Week\BlogManager\Infrastructure\obj\Release\net5.0\Infrastructure.pdb

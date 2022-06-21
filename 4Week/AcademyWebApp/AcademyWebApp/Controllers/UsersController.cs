@@ -178,5 +178,31 @@ namespace AcademyWebApp.Controllers
                 await _signinManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult ChangePasswordLogin()
+        {
+            if (User.Identity.IsAuthenticated)
+                return View();
+            return (RedirectToAction("Login"));
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangePasswordLoginAsync(ChangePassowrdLoginViewModel model)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (user != null)
+            {
+                var result = await _userManager.ChangePasswordAsync(user, model.Password, model.NewPassword);
+                if (result.Succeeded)
+                    ViewBag.Message = $"Password Changed";
+                else
+                    ViewBag.Message = $"An error occours: {string.Join(' ', result.Errors.Select(e => e.Description))}";
+            }
+            return View();          
+        }
     }
 }
